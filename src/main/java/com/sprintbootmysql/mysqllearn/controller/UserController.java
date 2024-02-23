@@ -1,6 +1,9 @@
-package com.sprintbootmysql.mysqllearn;
+package com.sprintbootmysql.mysqllearn.controller;
 
 
+import com.sprintbootmysql.mysqllearn.entity.User;
+import com.sprintbootmysql.mysqllearn.repository.UserRepository;
+import com.sprintbootmysql.mysqllearn.service.UserRepoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,11 +14,11 @@ import java.util.List;
 public class UserController {
 
     @Autowired
-    UserRepository userRepository;
+    UserRepoService userRepoService;
 
     @GetMapping("/all")
     List<User> getAllUsers(){
-        return userRepository.findAll();
+        return userRepoService.getAllUsers();
     }
 
     @PostMapping("/createuser")

@@ -1,5 +1,6 @@
-package com.sprintbootmysql.mysqllearn;
+package com.sprintbootmysql.mysqllearn.repository;
 
+import com.sprintbootmysql.mysqllearn.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.sprintbootmysql.mysqllearn;
+package com.sprintbootmysql.mysqllearn.entity;
 
 
 import jakarta.persistence.Entity;
