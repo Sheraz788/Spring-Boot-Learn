@@ -22,4 +22,25 @@ public class UserRepoService {
 
     }
 
+    public User saveUserInfo(User user){
+
+        return userRepository.save(user);
+
+    }
+
+    public void deleteById(Long id){
+
+        userRepository.deleteById(id);
+
+    }
+
+
+    public void updateUserName(Long id, String userName){
+
+        User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User with this Id not found"));
+
+        user.setName(userName);
+
+        userRepository.save(user);
+    }
 }
